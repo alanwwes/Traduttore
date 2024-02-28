@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Traduttore personalizzato</title>
+  <style>
+    #input {
+      width: 80%;
+      height: 100px;
+      margin: 20px auto;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #output {
+      width: 80%;
+      height: 100px;
+      margin: 20px auto;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #translate-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .bottone {
+	display: block;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;   
+	border-radius: 5px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <h1>alanwes translator</h1>
+
+  <label for="input">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤFrase da tradurre:</label>
+  <textarea id="input" name="input"></textarea>
+
+  <button id="translate-btn">Traduci</button>
+
+  <label for="output">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ*|@#~ [|@&{[[@ㅤㅤㅤ↘↘↘↘</label>
+  <textarea id="output" name="output"></textarea>
+
+ <script>
+  const translateBtn = document.getElementById('translate-btn');
+  translateBtn.addEventListener('click', function() {
+    const inputText = document.getElementById('input').value;
+    let translatedText = '';
+
+    for (let i = 0; i < inputText.length; i++) {
+      let c = inputText.charAt(i);
+      if (c == '@') {
+        translatedText += 'a';
+      } else if (c == ':' ) {
+        translatedText += 'b';
+      } else if (c == '"' ) {
+        translatedText += 'c';
+      } else if (c == '&' ) {
+        translatedText += 'd';
+      } else if (c == '~' ) {
+        translatedText += 'e';
+      } else if (c == '*' ) {
+        translatedText += 'f';
+      } else if (c == '-' ) {
+        translatedText += 'g';
+      } else if (c == '+' ) {
+        translatedText += 'h';
+      } else if (c == '>' ) {
+        translatedText += 'i';
+      } else if (c == '=' ) {
+        translatedText += 'j';
+      } else if (c == '(' ) {
+        translatedText += 'k';
+      } else if (c == ')' ) {
+        translatedText += 'l';
+      } else if (c == '/' ) {
+        translatedText += 'm';
+      } else if (c == ';' ) {
+        translatedText += 'n';
+      } else if (c == '{' ) {
+        translatedText += 'o';
+      } else if (c == '}' ) {
+        translatedText += 'p';
+      } else if (c == '%' ) {
+        translatedText += 'q';
+      } else if (c == '|' ) {
+        translatedText += 'r';
+      } else if (c == '#' ) {
+        translatedText += 's';
+      } else if (c == '[' ) {
+        translatedText += 't';
+      } else if (c == '<' ) {
+        translatedText += 'u';
+      } else if (c == "'" ) {
+        translatedText += "v";
+      } else if (c == '^' ) {
+        translatedText += 'w';
+      } else if (c == '€' ) {
+        translatedText += 'x';
+      } else if (c == ']' ) {
+        translatedText += 'y';
+      } else if (c == '_' ) {
+        translatedText += 'z';
+      } else if (c == ' ' || c == ' ') {
+        translatedText += ' ';
+      }
+    }
+
+    document.getElementById('output').value = translatedText;
+  });
+</script>
+
+ <a href="index.html" class="bottone">Da italiano a >[@)>@;{</a>
+</body>
+</html>
